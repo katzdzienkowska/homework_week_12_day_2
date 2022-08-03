@@ -1,5 +1,4 @@
 public class Book {
-
     private String title;
     private String author;
     private String genre;
@@ -18,7 +17,15 @@ public class Book {
         return author;
     }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public String getGenre() {
         return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 }

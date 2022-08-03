@@ -3,23 +3,22 @@ import java.util.ArrayList;
 public class Borrower {
 
     private String name;
-    private ArrayList<Book> borrowersCollection;
+    private ArrayList<Book> collection;
 
-    public Borrower(String name){
-        this.name = name;
-        this.borrowersCollection = new ArrayList<>();
+    public Borrower(String borrowerName) {
+        this.name = borrowerName;
+        this.collection = new ArrayList<Book>();
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public int borrowedBooksCount(){
-        return borrowersCollection.size();
+    public int bookCount() {
+        return this.collection.size();
     }
 
-    public void borrowBook(Book book, Library library){
-        library.removeBook(book);
-        borrowersCollection.add(book);
+    public void addBook(Book book) {
+        this.collection.add(book);
     }
 }
